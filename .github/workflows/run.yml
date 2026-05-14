@@ -3,6 +3,8 @@ on:
   workflow_dispatch: # 允许手动点击执行   
   schedule:
     - cron: '30 0 * * *' # 每天UTC时间0:30（北京时间早上8:30）自动运行
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true    
 jobs:
   build:
     runs-on: ubuntu-latest
