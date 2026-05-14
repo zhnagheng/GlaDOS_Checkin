@@ -23,5 +23,6 @@ jobs:
           pip install requests
       - name: Run Checkin Scrript
         env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
           GR_COOKIE: ${{secrets.GR_COOKIE}}
         run: python checkin.py  
